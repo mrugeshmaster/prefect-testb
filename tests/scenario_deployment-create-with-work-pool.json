@@ -1,0 +1,94 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\": \"test-flow-work-pool-1\"}",
+    "ResponseBody": "{\"id\": \"f47ac10b-58cc-4372-a567-0e02b2c3d479\", \"name\": \"test-flow-work-pool-1\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/flows/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:47:03.392Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\": \"test-pool-work-pool-1\", \"type\": \"process\"}",
+    "ResponseBody": "{\"id\": \"550e8400-e29b-41d4-a716-446655440001\", \"name\": \"test-pool-work-pool-1\", \"type\": \"process\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/work_pools/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:47:03.392Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\": \"test-deployment-work-pool-1\", \"flow_id\": \"f47ac10b-58cc-4372-a567-0e02b2c3d479\", \"work_pool_name\": \"test-pool-work-pool-1\"}",
+    "ResponseBody": "{\"id\": \"6ba7b810-9dad-11d1-80b4-00c04fd430c8\", \"name\": \"test-deployment-work-pool-1\", \"flow_id\": \"f47ac10b-58cc-4372-a567-0e02b2c3d479\", \"work_pool_name\": \"test-pool-work-pool-1\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/deployments/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:47:03.392Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"6ba7b810-9dad-11d1-80b4-00c04fd430c8\", \"name\": \"test-deployment-work-pool-1\", \"work_pool_name\": \"test-pool-work-pool-1\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/deployments/6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:47:03.392Z",
+    "Scheme": "http"
+  }
+]
