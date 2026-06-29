@@ -1,0 +1,48 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"status-schema-wq-1\"}",
+    "ResponseBody": "{\"id\": \"b7c8d9e0-f1a2-3456-7890-bcdef1234567\", \"name\": \"status-schema-wq-1\", \"status\": \"NOT_READY\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/work_queues/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:47:24.067Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"health\": {\"is_healthy\": false, \"last_poll_time\": null}, \"runs\": {\"late_count\": 0}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/work_queues/b7c8d9e0-f1a2-3456-7890-bcdef1234567/status",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:47:24.067Z",
+    "Scheme": "http"
+  }
+]

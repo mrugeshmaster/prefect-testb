@@ -1340,9 +1340,9 @@ class TestReadWorkQueueStatus:
         parsed_response = parse_obj_as(
             schemas.core.WorkQueueStatusDetail, response.json()
         )
-        assert parsed_response.healthy is True
-        assert parsed_response.late_runs_count == 0
-        assert parsed_response.last_polled == recently_polled_work_queue.last_polled
+        assert parsed_response.health.is_healthy is True
+        assert parsed_response.runs.late_count == 0
+        assert parsed_response.health.last_poll_time == recently_polled_work_queue.last_polled
 
     async def test_read_work_queue_status_unhealthy_due_to_lack_of_polls(
         self, client, not_recently_polled_work_queue
@@ -1356,9 +1356,9 @@ class TestReadWorkQueueStatus:
         parsed_response = parse_obj_as(
             schemas.core.WorkQueueStatusDetail, response.json()
         )
-        assert parsed_response.healthy is False
-        assert parsed_response.late_runs_count == 0
-        assert parsed_response.last_polled == not_recently_polled_work_queue.last_polled
+        assert parsed_response.health.is_healthy is False
+        assert parsed_response.runs.late_count == 0
+        assert parsed_response.health.last_poll_time == not_recently_polled_work_queue.last_polled
 
     async def test_read_work_queue_status_unhealthy_due_to_late_runs(
         self, client, work_queue_with_late_runs
@@ -1372,9 +1372,9 @@ class TestReadWorkQueueStatus:
         parsed_response = parse_obj_as(
             schemas.core.WorkQueueStatusDetail, response.json()
         )
-        assert parsed_response.healthy is False
-        assert parsed_response.late_runs_count == 1
-        assert parsed_response.last_polled == work_queue_with_late_runs.last_polled
+        assert parsed_response.health.is_healthy is False
+        assert parsed_response.runs.late_count == 1
+        assert parsed_response.health.last_poll_time == work_queue_with_late_runs.last_polled
 
     async def test_read_work_queue_returns_correct_status_when_work_queues_share_name(
         self,
@@ -1391,7 +1391,7 @@ class TestReadWorkQueueStatus:
         parsed_healthy_response = parse_obj_as(
             schemas.core.WorkQueueStatusDetail, healthy_response.json()
         )
-        assert parsed_healthy_response.healthy is True
+        assert parsed_healthy_response.health.is_healthy is True
 
         unhealthy_response = await client.get(
             f"/work_queues/{work_queue_with_late_runs.id}/status"
@@ -1402,7 +1402,7 @@ class TestReadWorkQueueStatus:
         parsed_unhealthy_response = parse_obj_as(
             schemas.core.WorkQueueStatusDetail, unhealthy_response.json()
         )
-        assert parsed_unhealthy_response.healthy is False
+        assert parsed_unhealthy_response.health.is_healthy is False
 
     async def test_read_work_queue_status_returns_404_if_does_not_exist(self, client):
         response = await client.get(f"/work_queues/{uuid4()}/status")
