@@ -58,6 +58,7 @@ class TestDeploymentCreate:
                     name="test-deployment",
                     flow_id=uuid4(),
                     worker_pool_queue_id=uuid4(),
+                    work_pool_name="test-work-pool",
                 )
             )
 
@@ -83,7 +84,7 @@ class TestDeploymentCreate:
             ),
         ):
             deployment_create = DeploymentCreate(
-                **dict(name="test-deployment", flow_id=uuid4(), **kwargs)
+                **dict(name="test-deployment", flow_id=uuid4(), work_pool_name="test-work-pool", **kwargs)
             )
 
         for key in kwargs.keys():
@@ -98,6 +99,7 @@ class TestDeploymentCreate:
             name="test-deployment",
             flow_id=uuid4(),
             job_variables={},
+            work_pool_name="test-work-pool",
         )
 
         base_job_template = {
@@ -165,11 +167,12 @@ class TestDeploymentCreate:
                 flow_id=uuid4(),
                 concurrency_limit=5,
                 global_concurrency_limit_id=uuid4(),
+                work_pool_name="test-work-pool",
             )
 
         # Test validation passes with just concurrency_limit
         deployment = DeploymentCreate(
-            name="test-deployment", flow_id=uuid4(), concurrency_limit=5
+            name="test-deployment", flow_id=uuid4(), concurrency_limit=5, work_pool_name="test-work-pool"
         )
         assert deployment.concurrency_limit == 5
         assert deployment.global_concurrency_limit_id is None
@@ -180,12 +183,13 @@ class TestDeploymentCreate:
             name="test-deployment",
             flow_id=uuid4(),
             global_concurrency_limit_id=global_limit_id,
+            work_pool_name="test-work-pool",
         )
         assert deployment.global_concurrency_limit_id == global_limit_id
         assert deployment.concurrency_limit is None
 
         # Test validation passes with neither limit
-        deployment = DeploymentCreate(name="test-deployment", flow_id=uuid4())
+        deployment = DeploymentCreate(name="test-deployment", flow_id=uuid4(), work_pool_name="test-work-pool")
         assert deployment.concurrency_limit is None
         assert deployment.global_concurrency_limit_id is None
 
@@ -224,7 +228,7 @@ class TestDeploymentUpdate:
             ),
         ):
             deployment_update = DeploymentCreate(
-                name="test-deployment", flow_id=uuid4(), **kwargs
+                name="test-deployment", flow_id=uuid4(), work_pool_name="test-work-pool", **kwargs
             )
 
         for key in kwargs.keys():
