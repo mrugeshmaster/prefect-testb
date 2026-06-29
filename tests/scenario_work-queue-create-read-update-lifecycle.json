@@ -1,0 +1,71 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\":\"test-work-queue-1751183000\",\"description\":\"Integration test queue\",\"is_paused\":false}",
+    "ResponseBody": "{\"id\":\"b2e4f6a8-1c3d-4e5f-9a7b-8d0e2f4c6a8b\",\"name\":\"test-work-queue-1751183000\",\"description\":\"Integration test queue\",\"is_paused\":false,\"concurrency_limit\":null,\"priority\":null,\"work_pool_name\":null,\"status\":\"READY\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/work_queues/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:36:01.956Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\":\"b2e4f6a8-1c3d-4e5f-9a7b-8d0e2f4c6a8b\",\"name\":\"test-work-queue-1751183000\",\"description\":\"Integration test queue\",\"is_paused\":false}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/work_queues/b2e4f6a8-1c3d-4e5f-9a7b-8d0e2f4c6a8b",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:36:01.956Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"is_paused\":true,\"description\":\"Updated description\"}",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/work_queues/b2e4f6a8-1c3d-4e5f-9a7b-8d0e2f4c6a8b",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:36:01.956Z",
+    "Scheme": "http"
+  }
+]
