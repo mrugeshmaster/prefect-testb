@@ -1,0 +1,48 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\": \"test-wq-max-desc\", \"description\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}",
+    "ResponseBody": "{\"id\": \"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11\", \"name\": \"test-wq-max-desc\", \"description\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"is_paused\": false, \"concurrency_limit\": null, \"priority\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/work_queues/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:45:23.343Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11\", \"name\": \"test-wq-max-desc\", \"description\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"is_paused\": false, \"concurrency_limit\": null, \"priority\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/work_queues/a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:45:23.343Z",
+    "Scheme": "http"
+  }
+]
