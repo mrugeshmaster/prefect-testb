@@ -1,0 +1,48 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\": \"wq-integration-desc-test\", \"description\": \"My integration test work queue description\"}",
+    "ResponseBody": "{\"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\", \"name\": \"wq-integration-desc-test\", \"description\": \"My integration test work queue description\", \"is_paused\": false, \"priority\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/work_queues/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:46:49.337Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\", \"name\": \"wq-integration-desc-test\", \"description\": \"My integration test work queue description\", \"is_paused\": false, \"priority\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/work_queues/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:46:49.337Z",
+    "Scheme": "http"
+  }
+]
