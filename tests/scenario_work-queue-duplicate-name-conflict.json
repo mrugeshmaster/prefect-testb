@@ -1,0 +1,48 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\":\"dup-work-queue-1751183000\",\"description\":\"First queue\",\"is_paused\":false}",
+    "ResponseBody": "{\"id\":\"c3f5a7b9-2d4e-5f6a-8b1c-4e6f8a0b2c4d\",\"name\":\"dup-work-queue-1751183000\",\"description\":\"First queue\",\"is_paused\":false,\"status\":\"READY\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/work_queues/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:36:04.438Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "127.0.0.1",
+    "RequestBody": "{\"name\":\"dup-work-queue-1751183000\",\"description\":\"Duplicate queue\",\"is_paused\":false}",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/work_queues/",
+    "QueryParams": {},
+    "StatusCode": 409,
+    "Port": 4200,
+    "Timestamp": "2026-06-29T23:36:04.438Z",
+    "Scheme": "http"
+  }
+]
